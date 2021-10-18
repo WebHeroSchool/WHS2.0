@@ -72,10 +72,7 @@ body {
     align-items: center;
     width: 100%;
     height: 32px;
-    font-family: 'PT Serif', serif;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 32px;
+    font: bold 24px/31px PT_Serif;
     margin: 2px 0 0 8px;
 }
 
@@ -138,7 +135,7 @@ body {
 
 
 .main {
-    display: flex;
+    display: block;
     flex-flow: row wrap;
     width: 758px;
     height: 445px;
@@ -227,13 +224,12 @@ body {
     height: 657px;
     justify-content: center;
     align-items: center;
-    background: url('https://i.ibb.co/g7dnnrQ/Frame.png');
+    background: url('../images/Frame.png');
     background-size: 100% 100%;
     color: #ffffff;
     margin: auto;
     padding: 0;
     border: dashed 1px red;
-
 }
 
 /*@media screen and (max-width: 1920px) { 
