@@ -4,15 +4,17 @@ body, html {
     max-width: 1920px;
     max-height: 1080px;
     justify-content: center;
+    padding: 0 10% 0 10%;
+    margin: 0;
 }
 
 .container {
     display: flex;
     flex-flow: row wrap;
-    margin: auto;
-    width: 100%;
+    width: auto;
     background: #FFFFFF;
-    margin: 40px 10.47% 133px 10.21%;
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
 }
 
 .header {
@@ -115,7 +117,10 @@ body, html {
     align-content: flex-start;
     background: url("../img/Frame.jpg");
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: top left 101%;
+    border-image: 1px solid black;
+    padding-top: 76px;
+    margin: 0 0 57px 0;
 }
 .main__title {
     display: flex;
@@ -129,7 +134,7 @@ body, html {
     font-size: 66px;
     line-height: 87px;
     color: #000000;
-    margin: 76px 0 40px 0;
+    margin: 0 0 40px 0;
 }
 .main__subtitle {
     display: flex;
@@ -181,7 +186,6 @@ body, html {
     height: 8px;
     justify-content: center;
     align-items: center;
-    margin: 0 10.47% 0 10.21%;
 }    
 
 .pip {
