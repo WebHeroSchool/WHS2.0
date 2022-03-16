@@ -1,12 +1,11 @@
 body, html {
     margin: 0;
+    
 }
 
 .container {
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    background: #FFFFFF;
+    flex-direction: column;
     padding: 40px 10% 40px 10%;
 }
 
@@ -101,7 +100,6 @@ body, html {
     display: flex;
     flex-flow: column nowrap;
     height: 657px;
-    width: 95%;
     justify-content: flex-start;
     align-content: flex-start;
     background: url("../img/Frame.jpg");
@@ -170,7 +168,6 @@ body, html {
 
 .navigation {
     display: flex;
-    width: 95%;
     height: 8px;
     justify-content: center;
     align-items: center;
