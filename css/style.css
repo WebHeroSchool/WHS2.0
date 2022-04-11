@@ -13,7 +13,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    width: 100%;
+    width: 1523px;
     height: 35px;
     padding: 0;
     margin: 0 0 167px 0;
@@ -28,7 +28,6 @@ body, html {
     padding: 0;
     margin-right: 956px;
 }
-
 
 .logo__ellipse_darkblue {
     position: absolute;
@@ -59,7 +58,11 @@ body, html {
     padding-bottom: 3px;
 }
 
-.menu {
+input {
+    display: none;
+}
+
+.menu__box {
     display: flex;
     width: 100%;
     height: 35px;
@@ -106,6 +109,7 @@ body, html {
     background-repeat: no-repeat;
     background-position: top right;
     padding-top: 75px;
+    padding-right: 40px;
     margin: 0 0 57px 0;
 }
 .main__title {
@@ -190,14 +194,336 @@ body, html {
     margin-right: 0;
 }
   
-
-
-/*@media screen and (max-width: 1920px) { 
+@media screen and (max-width: 1367px) { 
     .container {
-        min-width: 1367px;
-        margin: 0 auto;
+       margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 16% 38px 16%;
+    }
+
+    .header {
+        width: 925px;
+        margin: 0 0 120px 0;
+    }
+
+    .logo {
+        margin-right: 420px;
+    }
+
+    .menu__box {
+        font: 500 14px/16px 'Roboto', arial, helvetica,sans-serif;
+    }
+
+    .main {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 280px;
+        justify-content: flex-start;
+        align-content: flex-start;
+        background: url("../img/Frame.jpg");
+        background-size: 55.3%;
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding-top: 17px;
+        padding-bottom: 230px;
+        margin: 0;
+    }
+    .main__title {
+        font-size: 50px;
+        line-height: 66px;
+        color: #000000;
+        margin: 0 0 40px 0;
+    }
+    .main__subtitle {
+        width: 367px;
+        height: 43px;
+        font-family: 'Roboto', serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        margin:0 0 41px 0;
+    }
+
+    .main__btn {
+        width: 209px;
+        height: 44px;
+        font-family: 'Roboto', serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        background: #0056EC;
+        color: #ffffff;
+        border-radius: 4px;
+        text-decoration: none;
+        padding: 14px 0 13px 16px;
+        transition: opacity 5s;
     }
 }
+
+@media screen and (max-width: 1024px) { 
+    .container {
+       margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 4.5% 38px 4.5%;
+    }
+
+    .header {
+        width: 932px;
+        margin: 0 0 120px 0;
+    }
+
+    .logo {
+        margin-right: 427px;
+    }
+
+    .menu__box {
+        font: 500 14px/16px 'Roboto', arial, helvetica,sans-serif;
+    }
+
+    .main {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 280px;
+        justify-content: flex-start;
+        align-content: flex-start;
+        background: url("../img/Frame.jpg");
+        background-size: 55.3%;
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding-top: 17px;
+        padding-bottom: 230px;
+        margin: 0;
+    }
+    .main__title {
+        font-size: 50px;
+        line-height: 66px;
+        color: #000000;
+        margin: 0 0 40px 0;
+    }
+    .main__subtitle {
+        width: 367px;
+        height: 43px;
+        font-family: 'Roboto', serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #000000;
+        margin:0 0 41px 0;
+    }
+
+    .main__btn {
+        width: 209px;
+        height: 44px;
+        font-family: 'Roboto', serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        background: #0056EC;
+        color: #ffffff;
+        border-radius: 4px;
+        text-decoration: none;
+        padding: 14px 0 13px 16px;
+        transition: opacity 5s;
+    }
+}
+
+@media screen and (max-width: 375px) { 
+    .container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 24px 6.5% 43px 6.5%;
+    }
+
+    .header {
+        width: 327px;
+        margin: 0 0 28px 0;
+    }
+
+    .logo {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        width: 36px;
+        height: 35px;
+        margin-right: 266px;
+    }
+
+    .logo__text {
+        display: none;
+    }
+
+    input {
+        display: block;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+      }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+    }
+      
+    .menu__btn {
+        display: flex;
+        align-items: flex-end;
+        position: fixed;
+        top: 25px;
+        left: 320px;
+        width: 26px;
+        height: 17px;
+        cursor: pointer;
+        z-index: 1;
+    }
+      
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .menu__link, 
+    .menu__link_active {
+        position: static;
+        font: 500 30px/35px 'Roboto', arial, helvetica,sans-serif;
+        transition: 0.5s;
+        white-space: nowrap;
+        margin-right: 0;
+}
+      
+    .menu__box {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        flex-flow: column nowrap;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 375px;
+        height: 100%;
+        margin: 0;
+        padding: 186px 0;
+        list-style: none;
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+    }
+      
+    .menu__link {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+
+    .menu__link:hover {
+        background-color: #CFD8DC;
+    }
+    .menu__link_active::after {
+        display: block;
+        content:'';
+        padding: 12px 24px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        color: #000;
+        background: none;
+    }
+
+    .main {
+        height: 468px;
+        width: 100%;
+        text-align: center;
+        background: url("../img/Frame.jpg");
+        background-size: 77%;
+        background-repeat: no-repeat;
+        background-position: top left 24%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+    }
+    .main__title {
+        height: 267px;
+        width: 239px;
+        font-size: 30px;
+        line-height: 40px;
+        color: #000000;
+        margin: 260px auto 30px auto;
+    }
+    .main__subtitle {
+        justify-content: center;
+        align-content: flex-start;
+        width: 258px;
+        height: 57px;
+        font-family: 'Roboto', serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        margin:0 auto 25px auto;
+    }
+
+    .main__btn {
+        width: 209px;
+        height: 44px;
+        font-family: 'Roboto', serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        background: #0056EC;
+        color: #ffffff;
+        border-radius: 4px;
+        text-decoration: none;
+        padding: 14px 0 13px 16px;
+        transition: opacity 5s;
+        margin: 0 auto;
+    }
+    .navigation {
+        display: none;
+    }    
+}
+
+
+
+
+
+
+
+
+
+/*
 
 @media screen and (max-width: 1366px) { 
     .container {
